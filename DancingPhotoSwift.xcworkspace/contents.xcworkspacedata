@@ -5,6 +5,9 @@
       location = "group:DancingPhotoSwift.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:/Users/hite/workshop/DancingPhotoSwift/DancingPhotoSwift/DPColorParser.swift">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

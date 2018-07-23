@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48109EE82105F567009C7B05 /* DPColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48109EE72105F567009C7B05 /* DPColorParser.swift */; };
+		48109EEA2105FBCE009C7B05 /* DPLayoutPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48109EE92105FBCE009C7B05 /* DPLayoutPageProtocol.swift */; };
 		4854831C2101DBBA002903C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831B2101DBBA002903C3 /* AppDelegate.swift */; };
 		4854831E2101DBBA002903C3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831D2101DBBA002903C3 /* RootViewController.swift */; };
 		485483202101DBBA002903C3 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831F2101DBBA002903C3 /* DataViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48109EE72105F567009C7B05 /* DPColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DPColorParser.swift; path = /Users/hite/workshop/DancingPhotoSwift/DancingPhotoSwift/DPColorParser.swift; sourceTree = "<absolute>"; };
+		48109EE92105FBCE009C7B05 /* DPLayoutPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutPageProtocol.swift; sourceTree = "<group>"; };
 		485483182101DBBA002903C3 /* DancingPhotoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingPhotoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4854831B2101DBBA002903C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4854831D2101DBBA002903C3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				4854831D2101DBBA002903C3 /* RootViewController.swift */,
 				4854831F2101DBBA002903C3 /* DataViewController.swift */,
 				485483212101DBBA002903C3 /* ModelController.swift */,
+				48109EE72105F567009C7B05 /* DPColorParser.swift */,
+				48109EE92105FBCE009C7B05 /* DPLayoutPageProtocol.swift */,
 				485483232101DBBA002903C3 /* Main.storyboard */,
 				485483262101DBBC002903C3 /* Assets.xcassets */,
 				485483282101DBBC002903C3 /* LaunchScreen.storyboard */,
@@ -202,7 +208,9 @@
 				485483332101E7BB002903C3 /* DPUtil.swift in Sources */,
 				485483222101DBBA002903C3 /* ModelController.swift in Sources */,
 				485483202101DBBA002903C3 /* DataViewController.swift in Sources */,
+				48109EE82105F567009C7B05 /* DPColorParser.swift in Sources */,
 				4854831C2101DBBA002903C3 /* AppDelegate.swift in Sources */,
+				48109EEA2105FBCE009C7B05 /* DPLayoutPageProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
