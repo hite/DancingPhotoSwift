@@ -1,0 +1,6 @@
+module Pods_DancingPhotoSwift [system] {
+  umbrella header "Pods-DancingPhotoSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

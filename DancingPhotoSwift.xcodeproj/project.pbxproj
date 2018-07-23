@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4854831C2101DBBA002903C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831B2101DBBA002903C3 /* AppDelegate.swift */; };
+		4854831E2101DBBA002903C3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831D2101DBBA002903C3 /* RootViewController.swift */; };
+		485483202101DBBA002903C3 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831F2101DBBA002903C3 /* DataViewController.swift */; };
+		485483222101DBBA002903C3 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485483212101DBBA002903C3 /* ModelController.swift */; };
+		485483252101DBBA002903C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485483232101DBBA002903C3 /* Main.storyboard */; };
+		485483272101DBBC002903C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485483262101DBBC002903C3 /* Assets.xcassets */; };
+		4854832A2101DBBC002903C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485483282101DBBC002903C3 /* LaunchScreen.storyboard */; };
+		485483332101E7BB002903C3 /* DPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485483322101E7BB002903C3 /* DPUtil.swift */; };
+		C5A483DF62778E624A8F2E9E /* libPods-DancingPhotoSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6522387CA212AD126B03BFE /* libPods-DancingPhotoSwift.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		485483182101DBBA002903C3 /* DancingPhotoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingPhotoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4854831B2101DBBA002903C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4854831D2101DBBA002903C3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4854831F2101DBBA002903C3 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		485483212101DBBA002903C3 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		485483242101DBBA002903C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		485483262101DBBC002903C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		485483292101DBBC002903C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4854832B2101DBBC002903C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485483322101E7BB002903C3 /* DPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUtil.swift; sourceTree = "<group>"; };
+		9D726215A36B653987EECD26 /* Pods-DancingPhotoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingPhotoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DancingPhotoSwift/Pods-DancingPhotoSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		9D808659B9640916ED011D89 /* Pods-DancingPhotoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingPhotoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DancingPhotoSwift/Pods-DancingPhotoSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B6522387CA212AD126B03BFE /* libPods-DancingPhotoSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DancingPhotoSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		485483152101DBBA002903C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A483DF62778E624A8F2E9E /* libPods-DancingPhotoSwift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4854830F2101DBBA002903C3 = {
+			isa = PBXGroup;
+			children = (
+				4854831A2101DBBA002903C3 /* DancingPhotoSwift */,
+				485483192101DBBA002903C3 /* Products */,
+				E978FFD4BB91B6D9A4B6922D /* Pods */,
+				5A29449AB7CD9D97914D5851 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		485483192101DBBA002903C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				485483182101DBBA002903C3 /* DancingPhotoSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4854831A2101DBBA002903C3 /* DancingPhotoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				485483312101E795002903C3 /* Util */,
+				4854831B2101DBBA002903C3 /* AppDelegate.swift */,
+				4854831D2101DBBA002903C3 /* RootViewController.swift */,
+				4854831F2101DBBA002903C3 /* DataViewController.swift */,
+				485483212101DBBA002903C3 /* ModelController.swift */,
+				485483232101DBBA002903C3 /* Main.storyboard */,
+				485483262101DBBC002903C3 /* Assets.xcassets */,
+				485483282101DBBC002903C3 /* LaunchScreen.storyboard */,
+				4854832B2101DBBC002903C3 /* Info.plist */,
+			);
+			path = DancingPhotoSwift;
+			sourceTree = "<group>";
+		};
+		485483312101E795002903C3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				485483322101E7BB002903C3 /* DPUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		5A29449AB7CD9D97914D5851 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6522387CA212AD126B03BFE /* libPods-DancingPhotoSwift.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E978FFD4BB91B6D9A4B6922D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D726215A36B653987EECD26 /* Pods-DancingPhotoSwift.debug.xcconfig */,
+				9D808659B9640916ED011D89 /* Pods-DancingPhotoSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		485483172101DBBA002903C3 /* DancingPhotoSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4854832E2101DBBC002903C3 /* Build configuration list for PBXNativeTarget "DancingPhotoSwift" */;
+			buildPhases = (
+				62758444C1CEEECB4E723362 /* [CP] Check Pods Manifest.lock */,
+				485483142101DBBA002903C3 /* Sources */,
+				485483152101DBBA002903C3 /* Frameworks */,
+				485483162101DBBA002903C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DancingPhotoSwift;
+			productName = DancingPhotoSwift;
+			productReference = 485483182101DBBA002903C3 /* DancingPhotoSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		485483102101DBBA002903C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = liang;
+				TargetAttributes = {
+					485483172101DBBA002903C3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 485483132101DBBA002903C3 /* Build configuration list for PBXProject "DancingPhotoSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4854830F2101DBBA002903C3;
+			productRefGroup = 485483192101DBBA002903C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				485483172101DBBA002903C3 /* DancingPhotoSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		485483162101DBBA002903C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4854832A2101DBBC002903C3 /* LaunchScreen.storyboard in Resources */,
+				485483272101DBBC002903C3 /* Assets.xcassets in Resources */,
+				485483252101DBBA002903C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62758444C1CEEECB4E723362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DancingPhotoSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		485483142101DBBA002903C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4854831E2101DBBA002903C3 /* RootViewController.swift in Sources */,
+				485483332101E7BB002903C3 /* DPUtil.swift in Sources */,
+				485483222101DBBA002903C3 /* ModelController.swift in Sources */,
+				485483202101DBBA002903C3 /* DataViewController.swift in Sources */,
+				4854831C2101DBBA002903C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		485483232101DBBA002903C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				485483242101DBBA002903C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		485483282101DBBC002903C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				485483292101DBBC002903C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4854832C2101DBBC002903C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+			};
+			name = Debug;
+		};
+		4854832D2101DBBC002903C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4854832F2101DBBC002903C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D726215A36B653987EECD26 /* Pods-DancingPhotoSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F3P75AV37;
+				INFOPLIST_FILE = DancingPhotoSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.hite.app.DancingPhotoSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		485483302101DBBC002903C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D808659B9640916ED011D89 /* Pods-DancingPhotoSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F3P75AV37;
+				INFOPLIST_FILE = DancingPhotoSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.hite.app.DancingPhotoSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		485483132101DBBA002903C3 /* Build configuration list for PBXProject "DancingPhotoSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4854832C2101DBBC002903C3 /* Debug */,
+				4854832D2101DBBC002903C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4854832E2101DBBC002903C3 /* Build configuration list for PBXNativeTarget "DancingPhotoSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4854832F2101DBBC002903C3 /* Debug */,
+				485483302101DBBC002903C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 485483102101DBBA002903C3 /* Project object */;
+}
