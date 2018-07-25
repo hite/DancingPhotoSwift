@@ -40,10 +40,12 @@ class DPLayoutPageController: UIViewController, DPLayoutPageProtocol {
             t.sizeToFit()
             
             t.snp.makeConstraints { (make) in
-                make.top.equalTo(self.view.snp_topMargin).offset(30)
+                make.top.equalTo(self.view.snp_topMargin).offset(20)
                 make.centerX.equalTo(self.view.snp_centerXWithinMargins)
             }
         }
+        
+        NSLog("View name = %@", self.pageName);
     }
     
     var dots = [UIView]();
@@ -90,26 +92,24 @@ class DPLayoutPageController: UIViewController, DPLayoutPageProtocol {
         NSLog("处理结束，耗时：%f", NSDate().timeIntervalSince1970 - startTime);
         return xyColors;
     }
-    
-//    NSLog(@"开始处理了，有点慢先等等，图片尺寸是%@", NSStringFromCGSize(tron.size));
-//    long long startTime = [[NSDate date] timeIntervalSince1970];
-//
-//    UIImageView *imgView = [[UIImageView alloc] initWithImage:tron];
-//    imgView.contentMode = UIViewContentModeScaleAspectFit;
-//    imgView.frame = CGRectMake(0, 0, MIN(SCREEN_WIDTH, tron.size.width), MIN(tron.size.height, SCREEN_HEIGHT));
-//
-//    // 两层循环，先 x 轴，再 y 轴
-//    for (NSInteger j = 0; j < CGRectGetHeight(imgView.bounds); j += yStepPixel) {
-//    NSMutableArray *xColors = [NSMutableArray arrayWithCapacity:100];
-//    for (NSInteger i = 0; i < CGRectGetWidth(imgView.bounds); i += xStepPixel) {
-//    CGPoint point = CGPointMake(i, j);
-//    [xColors addObject:[imgView colorOfPoint:point]];
-//    }
-//    [matrix addObject:xColors];
-//    }
-//
-//    NSLog(@"处理结束，耗时：%f", [[NSDate date] timeIntervalSince1970] - startTime);
-//    });
-//
-//    return matrix;
+}
+
+// https://github.com/sungeunDev/Sungeun_iOS/blob/eb6bb5e348f9beb5a7184585451e56e7809a7a7a/Study/Test/CollectionViewReordering/CollectionViewReordering/Extension.swift
+private extension CALayer {
+    func color(point: CGPoint) -> UIColor {
+        var pixel: [CUnsignedChar] = [0, 0, 0, 0]
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmap = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
+        let context = CGContext(data: &pixel, width: 1, height: 1, bitsPerComponent: 8, bytesPerRow: 4, space: colorSpace, bitmapInfo: bitmap.rawValue)
+        
+        context?.translateBy(x: -point.x, y: -point.y)
+        render(in: context!)
+        
+        let red: CGFloat = CGFloat(pixel[0])/255.0
+        let green: CGFloat = CGFloat(pixel[1])/255.0
+        let blue: CGFloat = CGFloat(pixel[2])/255.0
+        let alpha: CGFloat = CGFloat(pixel[3])/255.0
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
 }

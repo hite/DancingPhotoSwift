@@ -26,14 +26,14 @@ extension UIImage{
         let height = self.size.height;
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let test = 55;
+
         let bytesPerPixel: NSInteger = 4;
         let bytesPerRow = bytesPerPixel * 1;
         let bitsperComponet = 8
         var pixelData = [CUnsignedInt](repeating: 0, count: 4)
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
         
-        let context: CGContext = CGContext(data: &pixelData, width: 1, height: 1, bitsPerComponent: bitsperComponet, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
+        let context: CGContext = CGContext.init(data: &pixelData, width: 1, height: 1, bitsPerComponent: bitsperComponet, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
         context.setBlendMode(.normal)
         context.translateBy(x: -pointX, y: pointY-height)
         context.draw(cgImage!, in: CGRect(x: 0, y: 0, width: width, height: height))

@@ -21,7 +21,13 @@ import UIKit
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
     var pageData: [DPPageType] = []
-
+    
+    private var _welcomeController: DPWelcomeViewController?;
+    private var _frameController: DPLayoutFrameController?;
+    private var _VFLController: DPLayoutVFLViewController?;
+    private var _anchorController: DPLayoutAnchorViewController?;
+    private var _snapKitController: DPLayoutSnapKitController?;
+    private var _layoutController: DPLayoutKitViewController?;
 
     override init() {
         super.init()
@@ -37,9 +43,42 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 
         // Create a new view controller and pass suitable data.
         let type: DPPageType = self.pageData[index]
-        let welcome = DPWelcomeViewController(pageType: type);
-        
-        return welcome;
+        var vc: DPLayoutPageController;
+        if (type == .welcome){
+            if _welcomeController == nil{
+                _welcomeController = DPWelcomeViewController(pageType: type)
+            }
+            vc = _welcomeController!;
+        } else if(type == .frame){
+            if _frameController == nil{
+                _frameController = DPLayoutFrameController(pageType: type)
+            }
+            vc = _frameController!
+        } else if(type == .VFL){
+            if _VFLController == nil{
+                _VFLController = DPLayoutVFLViewController(pageType: type)
+            }
+            vc = _VFLController!
+        } else if(type == .anchor){
+            if _anchorController == nil{
+                _anchorController = DPLayoutAnchorViewController(pageType: type)
+            }
+            vc = _anchorController!
+        } else if(type == .snapkit){
+            if _snapKitController == nil{
+                _snapKitController = DPLayoutSnapKitController(pageType: type)
+            }
+            vc = _snapKitController!
+        } else if(type == .layoutkit){
+            if _layoutController == nil{
+                _layoutController = DPLayoutKitViewController(pageType: type)
+            }
+            vc = _layoutController!
+        } else {
+            vc = DPWelcomeViewController(pageType: type);
+        }
+ 
+        return vc;
     }
 
     func indexOfViewController(_ viewController: DPLayoutPageController) -> Int {

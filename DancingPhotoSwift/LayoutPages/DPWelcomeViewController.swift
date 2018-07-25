@@ -66,7 +66,6 @@ class DPWelcomeViewController: DPLayoutPageController {
     @objc func preload(_ sender: UIButton) -> Void {
         NSLog("iam here")
         _tip?.text = "开始加载~"
-        _tip?.sizeToFit();
 
         _ = DPWelcomeViewController.matrix;
         _tip?.text = "加载完毕"
