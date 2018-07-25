@@ -32,7 +32,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     override init() {
         super.init()
         // Create the data model.
-        pageData = [.welcome, DPPageType.frame, DPPageType.VFL, .anchor, .layoutkit, .snapkit]
+        pageData = [.welcome, .layoutkit, DPPageType.frame, DPPageType.VFL, .anchor, .snapkit]
     }
 
     func viewControllerAtIndex(_ index: Int) -> DPLayoutPageController? {
