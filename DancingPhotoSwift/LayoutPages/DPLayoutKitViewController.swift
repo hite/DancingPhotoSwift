@@ -26,42 +26,38 @@ class DPLayoutKitViewController: DPLayoutPageController {
         let yStep = (SCREEN_HEIGHT - yGap * CGFloat(yLen + 1)) / CGFloat(yLen);
         let yStartOffset: CGFloat = 1
         
+        let xStartOffset: CGFloat = 1
+        let xGap = oneUnit
         NSLog("开始作画:")
         let startTime  = NSDate().timeIntervalSince1970;
-        
-        let poster = SizeLayout<UIImageView>(width: 50, height: 50, config: { imageView in
-            imageView.image = UIImage(named: "img-source")
-        })
-        
-        let label = LabelLayout(text: "Hello World!", alignment: .center)
+        //
+        var ySubLayouts: [StackLayout] = [StackLayout]()
 
-        let stack = StackLayout(
-            axis: .vertical, sublayouts: [label, poster]
+        for (_, xColors) in colorMatrix.enumerated() {
+            // 计算横行步进。因为采样的长度是不足于屏幕的尺寸的
+            let xLen = xColors.count
+            let xStep = (SCREEN_WIDTH - xGap * CGFloat(xLen + 1)) / CGFloat(xLen)
+
+            var subLayouts: [SizeLayout] = [SizeLayout]()
+            for (_, color) in xColors.enumerated() {
+                let dotLayout = SizeLayout<UIView>(width: xStep, height: yStep, config:{(dot) in
+                    dot.backgroundColor = color
+                })
+                subLayouts.append(dotLayout)
+            }
+            let xStack = StackLayout(
+                axis: .horizontal,spacing: xGap, sublayouts: subLayouts
+            )
+            
+            ySubLayouts.append(xStack)
+        }
+        let yStack = StackLayout(
+            axis: .vertical, spacing: yGap, sublayouts: ySubLayouts
         )
         
-        let insets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 8)
-        let matrix = InsetLayout(insets: insets, sublayout: stack);
-        
+        let insets = UIEdgeInsets(top: yStartOffset, left: xStartOffset, bottom: 0, right: 0)
+        let matrix = InsetLayout(insets: insets, sublayout: yStack)
         matrix.arrangement().makeViews(in: self.view)
-//        for (yIdx, xColors) in colorMatrix.enumerated() {
-//            // 计算横行步进。因为采样的长度是不足于屏幕的尺寸的
-//            let xLen = xColors.count
-//            let xGap = oneUnit
-//            let xStep = (SCREEN_WIDTH - xGap * CGFloat(xLen + 1) ) / CGFloat(xLen)
-//            let xStartOffset: CGFloat = 1
-//
-//            for (i, color) in xColors.enumerated() {
-//                let dot = UIView()
-//
-//                dot.backgroundColor = color
-//
-//                self.dots.append(dot)
-//                self.view.addSubview(dot)
-//                // layoutkit
-//                dot.frame = CGRect(x: xStartOffset + (xGap + xStep) * CGFloat(i), y: yStartOffset + CGFloat(yIdx) * (yStep + yGap), width: xStep, height: yStep)
-//
-//            }
-//        }
         
         NSLog("画图结束，耗时：%f", NSDate().timeIntervalSince1970 - startTime);
     }
