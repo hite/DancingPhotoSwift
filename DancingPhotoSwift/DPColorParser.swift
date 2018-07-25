@@ -45,4 +45,6 @@ extension UIImage{
         
         return UIColor(red: red, green: green, blue: blue, alpha: alpha);
     }
+ 
 }
+

@@ -30,7 +30,7 @@ class DPWelcomeViewController: DPLayoutPageController {
         
         desc.snp.makeConstraints { (make) in
             make.top.equalTo(100);
-            make.height.equalTo(140)
+            make.height.equalTo(200)
             make.left.equalTo(20)
             make.right.equalTo(-20)
         };
@@ -68,7 +68,7 @@ class DPWelcomeViewController: DPLayoutPageController {
         _tip?.text = "开始加载~"
         _tip?.sizeToFit();
 
-        _ = DPWelcomeViewController.colorMatric();
+        _ = DPWelcomeViewController.matrix;
         _tip?.text = "加载完毕"
     }
 }
