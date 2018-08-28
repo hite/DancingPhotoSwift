@@ -12,6 +12,7 @@
 		48109EEE2106FA7F009C7B05 /* DPLayoutPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48109EED2106FA7F009C7B05 /* DPLayoutPageController.swift */; };
 		48109EF021070F2F009C7B05 /* DPWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48109EEF21070F2F009C7B05 /* DPWelcomeViewController.swift */; };
 		48109EF421081109009C7B05 /* DPViewColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48109EF321081109009C7B05 /* DPViewColorParser.swift */; };
+		48308CD621256336000AC47C /* dispatchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48308CD521256336000AC47C /* dispatchTest.swift */; };
 		4854831C2101DBBA002903C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831B2101DBBA002903C3 /* AppDelegate.swift */; };
 		4854831E2101DBBA002903C3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4854831D2101DBBA002903C3 /* RootViewController.swift */; };
 		485483222101DBBA002903C3 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485483212101DBBA002903C3 /* ModelController.swift */; };
@@ -33,6 +34,7 @@
 		48109EED2106FA7F009C7B05 /* DPLayoutPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutPageController.swift; sourceTree = "<group>"; };
 		48109EEF21070F2F009C7B05 /* DPWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPWelcomeViewController.swift; sourceTree = "<group>"; };
 		48109EF321081109009C7B05 /* DPViewColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPViewColorParser.swift; sourceTree = "<group>"; };
+		48308CD521256336000AC47C /* dispatchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dispatchTest.swift; sourceTree = "<group>"; };
 		485483182101DBBA002903C3 /* DancingPhotoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingPhotoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4854831B2101DBBA002903C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4854831D2101DBBA002903C3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				48109EF321081109009C7B05 /* DPViewColorParser.swift */,
 				48109EE92105FBCE009C7B05 /* DPLayoutPageProtocol.swift */,
 				485483212101DBBA002903C3 /* ModelController.swift */,
+				48308CD521256336000AC47C /* dispatchTest.swift */,
 				48109EEC2106FA22009C7B05 /* LayoutPages */,
 				485483232101DBBA002903C3 /* Main.storyboard */,
 				485483262101DBBC002903C3 /* Assets.xcassets */,
@@ -238,6 +241,7 @@
 				48109EF021070F2F009C7B05 /* DPWelcomeViewController.swift in Sources */,
 				48109EEE2106FA7F009C7B05 /* DPLayoutPageController.swift in Sources */,
 				485483222101DBBA002903C3 /* ModelController.swift in Sources */,
+				48308CD621256336000AC47C /* dispatchTest.swift in Sources */,
 				48F1C9DD210877A100C1A90F /* DPLayoutKitViewController.swift in Sources */,
 				48F1C9DB2108771E00C1A90F /* DPLayoutSnapKitController.swift in Sources */,
 				48109EE82105F567009C7B05 /* DPColorParser.swift in Sources */,
