@@ -8,8 +8,35 @@
 
 import Foundation
 
-class DispatchIO: NSObject {
-    let filePath: NSString = "test.zip"
+class DispatchIOTest: NSObject {
+    static func readFile() {
+        let filePath: NSString = "/Users/hite/workshop/DancingPhotoSwift/DancingPhotoSwift/wheretogo.rtf"
+        let fileDescriptor = open(filePath.utf8String!, (O_RDWR | O_CREAT | O_APPEND), (S_IRWXU | S_IRWXG))
+
+        let queue = DispatchQueue(label: "me.hite.test.swiftTest")
+        let cleanupHandler:(Int32) -> Void = { errorNumber in
+            
+        }
+        
+        let io = DispatchIO(type:.stream, fileDescriptor: fileDescriptor, queue: queue, cleanupHandler: cleanupHandler)
+        io.setLimit(highWater: 1024)
+        
+        io.read(offset: 0, length: Int.max, queue: queue) { (doneReading, data, error) in
+            if error > 0 {
+                print("读取错误，错误码 \(error)")
+                return
+            }
+            
+            if data != nil {
+                let partData = data as AnyObject as! Data
+                let partText:String = String(data: partData, encoding: .utf8)!
+                print("有数据， = \(partText)")
+            }
+            if (doneReading) {
+                io.close()
+            }
+        }
+    }
     
 }
 
