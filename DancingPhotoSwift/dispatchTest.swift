@@ -7,10 +7,11 @@
 //
 
 import Foundation
-
+// 讲指针的文章，https://www.jianshu.com/p/8217bf3444a8
 class DispatchIOTest: NSObject {
     static func readFile() {
-        let filePath: NSString = "/Users/hite/workshop/DancingPhotoSwift/DancingPhotoSwift/wheretogo.rtf"
+        let bundlePath = Bundle.main.bundlePath
+        let filePath: NSString = "\(bundlePath)/wheretogo.md" as NSString
         let fileDescriptor = open(filePath.utf8String!, (O_RDWR | O_CREAT | O_APPEND), (S_IRWXU | S_IRWXG))
 
         let queue = DispatchQueue(label: "me.hite.test.swiftTest")
@@ -21,6 +22,14 @@ class DispatchIOTest: NSObject {
         let io = DispatchIO(type:.stream, fileDescriptor: fileDescriptor, queue: queue, cleanupHandler: cleanupHandler)
         io.setLimit(highWater: 1024)
         
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let toFile = "\(documentsPath)/to.md" as NSString;
+        print(toFile)
+        let toFileDescriptor = open(toFile.utf8String!, (O_RDWR | O_CREAT | O_APPEND), (S_IRWXU | S_IRWXG))
+        
+        let writeIO = DispatchIO(type:.stream, fileDescriptor: toFileDescriptor, queue: queue, cleanupHandler: cleanupHandler)
+        var offset = 0;
+        writeIO.setLimit(highWater: 1024)
         io.read(offset: 0, length: Int.max, queue: queue) { (doneReading, data, error) in
             if error > 0 {
                 print("读取错误，错误码 \(error)")
@@ -28,9 +37,15 @@ class DispatchIOTest: NSObject {
             }
             
             if data != nil {
-                let partData = data as AnyObject as! Data
-                let partText:String = String(data: partData, encoding: .utf8)!
-                print("有数据， = \(partText)")
+                print("写到 to.last")
+                writeIO.write(offset: off_t(offset), data: data!, queue: queue, ioHandler: { (succ, data, error) in
+                    if error > 0 {
+                        print("写文件错误，错误码 \(error)")
+                    } else {
+                        print("Write done")
+                    }
+                })
+                offset = offset + (data?.count)!;
             }
             if (doneReading) {
                 io.close()

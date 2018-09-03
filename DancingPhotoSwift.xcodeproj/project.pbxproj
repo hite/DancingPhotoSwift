@@ -20,6 +20,7 @@
 		485483272101DBBC002903C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485483262101DBBC002903C3 /* Assets.xcassets */; };
 		4854832A2101DBBC002903C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485483282101DBBC002903C3 /* LaunchScreen.storyboard */; };
 		485483332101E7BB002903C3 /* DPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485483322101E7BB002903C3 /* DPUtil.swift */; };
+		48D2CE6D213D078000AE81FD /* wheretogo.md in Resources */ = {isa = PBXBuildFile; fileRef = 48D2CE6C213D078000AE81FD /* wheretogo.md */; };
 		48F1C9D5210821CB00C1A90F /* DPLayoutFrameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1C9D4210821CB00C1A90F /* DPLayoutFrameController.swift */; };
 		48F1C9D7210871BE00C1A90F /* DPLayoutVFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1C9D6210871BE00C1A90F /* DPLayoutVFLViewController.swift */; };
 		48F1C9D92108757A00C1A90F /* DPLayoutAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1C9D82108757A00C1A90F /* DPLayoutAnchorViewController.swift */; };
@@ -44,6 +45,7 @@
 		485483292101DBBC002903C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4854832B2101DBBC002903C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		485483322101E7BB002903C3 /* DPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUtil.swift; sourceTree = "<group>"; };
+		48D2CE6C213D078000AE81FD /* wheretogo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = wheretogo.md; sourceTree = "<group>"; };
 		48F1C9D4210821CB00C1A90F /* DPLayoutFrameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutFrameController.swift; sourceTree = "<group>"; };
 		48F1C9D6210871BE00C1A90F /* DPLayoutVFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutVFLViewController.swift; sourceTree = "<group>"; };
 		48F1C9D82108757A00C1A90F /* DPLayoutAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutAnchorViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				485483262101DBBC002903C3 /* Assets.xcassets */,
 				485483282101DBBC002903C3 /* LaunchScreen.storyboard */,
 				4854832B2101DBBC002903C3 /* Info.plist */,
+				48D2CE6C213D078000AE81FD /* wheretogo.md */,
 			);
 			path = DancingPhotoSwift;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				4854832A2101DBBC002903C3 /* LaunchScreen.storyboard in Resources */,
 				485483272101DBBC002903C3 /* Assets.xcassets in Resources */,
 				485483252101DBBA002903C3 /* Main.storyboard in Resources */,
+				48D2CE6D213D078000AE81FD /* wheretogo.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
