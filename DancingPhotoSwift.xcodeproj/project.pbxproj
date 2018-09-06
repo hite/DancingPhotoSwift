@@ -20,6 +20,8 @@
 		485483272101DBBC002903C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485483262101DBBC002903C3 /* Assets.xcassets */; };
 		4854832A2101DBBC002903C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485483282101DBBC002903C3 /* LaunchScreen.storyboard */; };
 		485483332101E7BB002903C3 /* DPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485483322101E7BB002903C3 /* DPUtil.swift */; };
+		4880C5AC213E22D4004A2491 /* out.file in Resources */ = {isa = PBXBuildFile; fileRef = 4880C5AB213E22D4004A2491 /* out.file */; };
+		4880C5B0213E5EB0004A2491 /* StructTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4880C5AF213E5EB0004A2491 /* StructTest.swift */; };
 		48D2CE6D213D078000AE81FD /* wheretogo.md in Resources */ = {isa = PBXBuildFile; fileRef = 48D2CE6C213D078000AE81FD /* wheretogo.md */; };
 		48F1C9D5210821CB00C1A90F /* DPLayoutFrameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1C9D4210821CB00C1A90F /* DPLayoutFrameController.swift */; };
 		48F1C9D7210871BE00C1A90F /* DPLayoutVFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1C9D6210871BE00C1A90F /* DPLayoutVFLViewController.swift */; };
@@ -45,6 +47,8 @@
 		485483292101DBBC002903C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4854832B2101DBBC002903C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		485483322101E7BB002903C3 /* DPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPUtil.swift; sourceTree = "<group>"; };
+		4880C5AB213E22D4004A2491 /* out.file */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = out.file; sourceTree = "<group>"; };
+		4880C5AF213E5EB0004A2491 /* StructTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructTest.swift; sourceTree = "<group>"; };
 		48D2CE6C213D078000AE81FD /* wheretogo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = wheretogo.md; sourceTree = "<group>"; };
 		48F1C9D4210821CB00C1A90F /* DPLayoutFrameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutFrameController.swift; sourceTree = "<group>"; };
 		48F1C9D6210871BE00C1A90F /* DPLayoutVFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPLayoutVFLViewController.swift; sourceTree = "<group>"; };
@@ -111,12 +115,14 @@
 				48109EE92105FBCE009C7B05 /* DPLayoutPageProtocol.swift */,
 				485483212101DBBA002903C3 /* ModelController.swift */,
 				48308CD521256336000AC47C /* dispatchTest.swift */,
+				4880C5AF213E5EB0004A2491 /* StructTest.swift */,
 				48109EEC2106FA22009C7B05 /* LayoutPages */,
 				485483232101DBBA002903C3 /* Main.storyboard */,
 				485483262101DBBC002903C3 /* Assets.xcassets */,
 				485483282101DBBC002903C3 /* LaunchScreen.storyboard */,
 				4854832B2101DBBC002903C3 /* Info.plist */,
 				48D2CE6C213D078000AE81FD /* wheretogo.md */,
+				4880C5AB213E22D4004A2491 /* out.file */,
 			);
 			path = DancingPhotoSwift;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 				485483272101DBBC002903C3 /* Assets.xcassets in Resources */,
 				485483252101DBBA002903C3 /* Main.storyboard in Resources */,
 				48D2CE6D213D078000AE81FD /* wheretogo.md in Resources */,
+				4880C5AC213E22D4004A2491 /* out.file in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4880C5B0213E5EB0004A2491 /* StructTest.swift in Sources */,
 				4854831E2101DBBA002903C3 /* RootViewController.swift in Sources */,
 				485483332101E7BB002903C3 /* DPUtil.swift in Sources */,
 				48109EF021070F2F009C7B05 /* DPWelcomeViewController.swift in Sources */,

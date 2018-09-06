@@ -112,7 +112,7 @@ class DPWelcomeViewController: DPLayoutPageController {
             make.centerX.equalTo(self.view.snp_centerXWithinMargins)
         }
         
-        DispatchIOTest.readFile()
+        demo()
     }
     
     

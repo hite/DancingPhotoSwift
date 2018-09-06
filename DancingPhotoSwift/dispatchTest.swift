@@ -7,6 +7,45 @@
 //
 
 import Foundation
+
+class DispatchWorkItemTest {
+    static func doit(){
+        let workItem = DispatchWorkItem(qos: .default, flags: DispatchWorkItemFlags()) {
+            print("Now is Beijing time : \(Date())")
+        }
+        
+        let queue = DispatchQueue(label: "me.hite.test.swift.dispatch", attributes: .concurrent)
+        queue.async(execute: workItem)
+        
+    }
+}
+
+class DispatchSemaphoreTest {
+    
+    static func task(index: Int){
+        print("Begin task \(index) ---->")
+        Thread.sleep(forTimeInterval: 2)
+        print("Sleep for 2 seconds in task \(index).")
+        print("--->End task \(index).")
+    }
+    
+    static func limitTaskNumber(){
+        let queue = DispatchQueue(label: "me.hite.test.swift.dispatch", attributes: .concurrent)
+        let semaphore = DispatchSemaphore(value: 2)
+        
+        
+        for idx in 0..<4 {
+            semaphore.wait()
+            queue.async {
+                task(index: idx)
+                semaphore.signal()
+            }
+        }
+
+    }
+}
+
+
 // 讲指针的文章，https://www.jianshu.com/p/8217bf3444a8
 class DispatchIOTest: NSObject {
     static func readFile() {
@@ -16,7 +55,7 @@ class DispatchIOTest: NSObject {
 
         let queue = DispatchQueue(label: "me.hite.test.swiftTest")
         let cleanupHandler:(Int32) -> Void = { errorNumber in
-            
+            print("文件读写完毕，\(errorNumber)")
         }
         
         let io = DispatchIO(type:.stream, fileDescriptor: fileDescriptor, queue: queue, cleanupHandler: cleanupHandler)
@@ -51,8 +90,64 @@ class DispatchIOTest: NSObject {
                 io.close()
             }
         }
+        
+        writeIO.close()
     }
     
+    
+    static func combileFiles(){
+        let bundlePath = Bundle.main.bundlePath
+        let file1 = "\(bundlePath)/wheretogo.md" as String
+        let file2 = "\(bundlePath)/Info.plist" as String
+        let fileArray = [file1, file2]
+        
+        let outFile = "\(bundlePath)/out.file" as NSString
+        print("Out file is \(outFile)")
+        let ioWriteQueue = DispatchQueue(label: "me.hite.test.iowrite")
+        
+        let writeCleanHandler: (Int32) -> Void = { errroNumber in
+            print("写入文件完成,\(Date())")
+        }
+        
+        let ioWrite = DispatchIO(type: .stream,
+                                 path: outFile.utf8String!,
+                                 oflag: (O_RDWR | O_CREAT | O_APPEND),
+                                 mode: (S_IRWXU | S_IRWXG),
+                                 queue: ioWriteQueue,
+                                 cleanupHandler: writeCleanHandler)
+        ioWrite?.setLimit(highWater: 1024*10)
+        
+        print("开始操作，\(Date())")
+        
+        let dispatchData = fileArray.reduce(DispatchData.empty) { data, filePath in
+            let url = URL(fileURLWithPath: filePath)
+            let fileData = try! Data(contentsOf: url, options: .mappedIfSafe)
+            
+            var tempData = data;
+            
+            let dispatchData = fileData.withUnsafeBytes({ (u8Ptr: UnsafePointer<UInt8>) -> DispatchData in
+                let rawPtr = UnsafeRawPointer(u8Ptr)
+                let innerData = Unmanaged.passRetained(fileData as NSData)
+                return DispatchData(bytesNoCopy: UnsafeRawBufferPointer(start: rawPtr, count: fileData.count), deallocator: .custom(nil, innerData.release))
+            })
+            
+            tempData.append(dispatchData)
+            return tempData
+        }
+        // 将 dispatch 写到另外一个地方
+        ioWrite?.write(offset: 0, data: dispatchData, queue: ioWriteQueue, ioHandler: { doneWriting, data, error in
+            if error > 0 {
+                print("写入数据出错，错误码：\(error)")
+                return
+            }
+            if data != nil {
+                print("正在写入数据，剩余数据\(data!.count) bytes")
+            }
+            if doneWriting {
+                ioWrite?.close()
+            }
+        })
+    }
 }
 
 class DispatchSourceTest: NSObject {
